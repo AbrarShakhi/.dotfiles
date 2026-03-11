@@ -18,5 +18,5 @@ run_stow() {
 check_dependencies
 create_directories
 recreate_directories
-install_modules
 run_stow
+install_modules
