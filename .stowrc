@@ -1,0 +1,5 @@
+--ignore=.stowrc
+--ignore=.gitignore
+--ignore=install.sh
+--ignore=lib
+--ignore=README.md
