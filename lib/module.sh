@@ -19,6 +19,6 @@ install_modules() {
     remove_dir ~/.local/share/nvim
     from_git https://github.com/NvChad/starter ~/.config/nvim
     
-    remove_dir ~/.config/.tmux/plugins/tpm
-    from_git https://github.com/tmux-plugins/tpm ~/.config/.tmux/plugins/tpm
+    remove_dir ~/.config/tmux/plugins/tpm
+    from_git https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 }
