@@ -49,3 +49,9 @@ export PATH="$PATH:$ANDROID_HOME/emulator"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 # export ANDROID_SDK_HOME="$HOME/.android"
 # export ANDROID_AVD_HOME="$HOME/.android/avd"
+
+# Jetbrains Toolbox
+JETBRAINS_TOOLBOX_PATH="$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
+if [ -d $JETBRAINS_TOOLBOX_PATH ]; then
+    export PATH="$PATH:$JETBRAINS_TOOLBOX_PATH"
+fi
