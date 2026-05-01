@@ -39,17 +39,13 @@ fi
 
 # Flutter
 FLUTTER_DIR="$DOT_PLUGIN_HOME/flutter"
-if [ -d $FLUTTER_DIR ]; then
-    export FLUTTER_DIR
-    export PATH="$PATH:$FLUTTER_DIR/bin"
-fi
+export FLUTTER_DIR
+export PATH="$PATH:$FLUTTER_DIR/bin"
 
 # Android Studio
-ASTUDIO_DIR="$HOME/Android/Sdk"
-if [ -d $ASTUDIO_DIR ]; then
-    export PATH="$PATH:$ASTUDIO_DIR/emulator"
-    export PATH="$PATH:$ASTUDIO_DIR/platform-tools"
-fi
-
-# Yay
-export YAY_USE_CURL=1
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+# export ANDROID_SDK_HOME="$HOME/.android"
+# export ANDROID_AVD_HOME="$HOME/.android/avd"
