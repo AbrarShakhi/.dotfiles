@@ -55,3 +55,7 @@ JETBRAINS_TOOLBOX_PATH="$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
 if [ -d $JETBRAINS_TOOLBOX_PATH ]; then
     export PATH="$PATH:$JETBRAINS_TOOLBOX_PATH"
 fi
+
+# Bun
+export BUN_INSTALL="$HOME/.local/apps/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
