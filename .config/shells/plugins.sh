@@ -46,6 +46,7 @@ export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 export PATH="$PATH:$ANDROID_HOME/emulator"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ASTUDIO_DIR/cmdline-tools/latest/bin"
 # export ANDROID_SDK_HOME="$HOME/.android"
 # export ANDROID_AVD_HOME="$HOME/.android/avd"
 
