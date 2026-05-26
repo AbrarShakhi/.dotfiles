@@ -49,13 +49,13 @@ create_directories() {
     log "Checking for necessary directories..."
 
     ensure_dir "$HOME/.local/apps"
-    ensure_dir "$HOME/.local/share/bin"
     ensure_dir "$HOME/.cache"
+    ensure_dir "$HOME/.local/bin"
 
     log "Checking configuration directory..."
     ensure_dir "$HOME/.config"
 }
 
 recreate_directories() {
-    prompt_recreation "$HOME/.local/bin"
+    prompt_recreation "$HOME/.scripts/"
 }
