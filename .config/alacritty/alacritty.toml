@@ -1,0 +1,54 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+# https://alacritty.org/config-alacritty.html
+
+[window]
+dynamic_padding = true
+opacity = 0.85
+blur = true
+dimensions = { columns = 100, lines = 25 }
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[font]
+size = 13
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 500
+unfocused_hollow = true
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
+
+[env]
+TERM = "xterm-256color"
+
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
