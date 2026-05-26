@@ -1,3 +1,8 @@
+if [ -n "${MYSHELL:-}" ]; then
+    [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
+    return 0
+fi
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
@@ -15,6 +20,7 @@ export SUDO_PROMPT="[sudo] password for $USER  :"
 [ -d "/ucrt64/bin" ] && PATH="/ucrt64/bin:${PATH}"
 [ -d "${XDG_DATA_HOME}/bin" ] && PATH="${XDG_DATA_HOME}/bin:${PATH}"
 [ -d "${HOME}/.local/bin" ] && PATH="${HOME}/.local/bin:${PATH}"
+[ -d "${HOME}/.local/scripts" ] && PATH="${HOME}/.local/scripts:${PATH}"
 [ -d "${HOME}/man" ] && MANPATH="${HOME}/man:${MANPATH}"
 [ -d "${HOME}/info" ] && INFOPATH="${HOME}/info:${INFOPATH}"
 

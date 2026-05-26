@@ -15,18 +15,16 @@ if [ -d $PYENV_ROOT ]; then
     eval "$(pyenv init -)"
 fi
 
-# nvm
-export NVM_DIR="$DOT_PLUGIN_HOME/nvm"
-if [ -d $NVM_DIR ]; then
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
-
 # Sdkman
 SDKMAN_DIR="$DOT_PLUGIN_HOME/sdkman"
 if [ -d $SDKMAN_DIR ]; then
     export SDKMAN_DIR
     [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+fi
+
+# Fnm
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd --shell $MYSHELL)"
 fi
 
 # Rustup
