@@ -1,6 +1,12 @@
-if [ -n "${MYSHELL:-}" ]; then
-    [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
-    return 0
+# if [ -n "${MYSHELL:-}" ]; then
+#     [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
+#     return 0
+# fi
+
+if [ -n "${BASH_VERSION}" ]; then
+    export MYSHELL=bash
+elif [ -n "${ZSH_VERSION}" ]; then
+    export MYSHELL=zsh
 fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -17,20 +23,14 @@ export HISTFILE="$HOME/.cache/.cmd_hist"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export SUDO_PROMPT="[sudo] password for $USER  :"
 
+[ -e "${ZDOTDIR}/prompt.sh" ] && . "${ZDOTDIR}/prompt.sh"
+
 [ -d "/ucrt64/bin" ] && PATH="/ucrt64/bin:${PATH}"
 [ -d "${XDG_DATA_HOME}/bin" ] && PATH="${XDG_DATA_HOME}/bin:${PATH}"
 [ -d "${HOME}/.local/bin" ] && PATH="${HOME}/.local/bin:${PATH}"
 [ -d "${HOME}/.local/scripts" ] && PATH="${HOME}/.local/scripts:${PATH}"
 [ -d "${HOME}/man" ] && MANPATH="${HOME}/man:${MANPATH}"
 [ -d "${HOME}/info" ] && INFOPATH="${HOME}/info:${INFOPATH}"
-
-if [ -n "${BASH_VERSION}" ]; then
-    export MYSHELL=bash
-elif [ -n "${ZSH_VERSION}" ]; then
-    export MYSHELL=zsh
-else
-    exit 0
-fi
 
 [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
 

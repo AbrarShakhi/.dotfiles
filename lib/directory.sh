@@ -58,4 +58,5 @@ create_directories() {
 
 recreate_directories() {
     prompt_recreation "$HOME/.scripts/"
+    prompt_recreation "$HOME/.config/nvim"
 }
