@@ -1,7 +1,9 @@
-# if [ -n "${MYSHELL:-}" ]; then
-#     [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
-#     return 0
-# fi
+[ -e "${ZDOTDIR}/prompt.sh" ] && . "${ZDOTDIR}/prompt.sh"
+
+if [ -n "${MYSHELL:-}" ]; then
+    [ -e "${ZDOTDIR}/plugins.sh" ] && . "${ZDOTDIR}/plugins.sh"
+    return 0
+fi
 
 if [ -n "${BASH_VERSION}" ]; then
     export MYSHELL=bash
@@ -22,8 +24,6 @@ export HISTFILE="$HOME/.cache/.cmd_hist"
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export SUDO_PROMPT="[sudo] password for $USER  :"
-
-[ -e "${ZDOTDIR}/prompt.sh" ] && . "${ZDOTDIR}/prompt.sh"
 
 [ -d "/ucrt64/bin" ] && PATH="/ucrt64/bin:${PATH}"
 [ -d "${XDG_DATA_HOME}/bin" ] && PATH="${XDG_DATA_HOME}/bin:${PATH}"
