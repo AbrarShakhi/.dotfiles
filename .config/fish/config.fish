@@ -28,3 +28,9 @@ end
 
 
 set -gx DOT_PLUGIN_HOME "$HOME/.local/apps"
+
+if command -q ssh-agent
+    and test "$OS" != "Windows_NT"
+    and test -z "$SSH_AUTH_SOCK"
+    eval (ssh-agent -c)
+end
