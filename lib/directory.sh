@@ -48,7 +48,7 @@ prompt_recreation() {
 create_directories() {
     log "Checking for necessary directories..."
 
-    ensure_dir "$HOME/.local/apps"
+    ensure_dir "$HOME/.local/extras"
     ensure_dir "$HOME/.cache"
     ensure_dir "$HOME/.local/bin"
 
