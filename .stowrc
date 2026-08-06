@@ -3,3 +3,4 @@
 --ignore=install.sh
 --ignore=lib
 --ignore=README.md
+--ignore=.config/alacritty
